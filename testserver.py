@@ -1,12 +1,14 @@
 # test_flask_app.py
 import requests
 import sys
+import time
 
 def test_add_item():
     url = "http://app:5000/add"
     data = {"title": "Buy groceries"}
 
     try:
+	time.sleep(10)
         response = requests.post(url, data=data)
     except Exception as e:
         print(f"Request failed: {e}")
