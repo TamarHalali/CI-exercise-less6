@@ -3,8 +3,8 @@ import requests
 import sys
 
 def test_add_item():
-    url = "http://flask_app:5001/add"  # זה ה-service name מ-Docker Compose
-    data = {"title": "Buy groceries"}
+	url = "http://app:5000/add"    
+	data = {"title": "Buy groceries"}
 
     try:
         response = requests.post(url, data=data)
