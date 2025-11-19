@@ -1,6 +1,6 @@
 import requests
 
-url = "http://flask_app:5001/add"   # replace with your actual server URL
+url = "http://app:5000/add"
 data = {
     "title": "Buy groceries"
 }
