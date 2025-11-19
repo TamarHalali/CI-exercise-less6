@@ -1,10 +1,7 @@
 name: Run Docker Compose Tests
-
 on:
-  push:
-    branches:
-      - master
-
+  push:
+    branches: [ "master" ]
 jobs:
   docker-test:
     runs-on: ubuntu-latest
