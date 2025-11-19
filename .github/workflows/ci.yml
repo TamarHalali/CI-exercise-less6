@@ -32,6 +32,6 @@ jobs:
           password: ${{ secrets.SMTP_PASSWORD }}
           subject: "Workflow Failed"
           body: "Docker Compose test failed! Check GitHub Actions logs."
-          to: example@gmail.com
+          to: tyh444222@gmail.com
           from: ${{ secrets.SMTP_USER }}
           secure: true
