@@ -7,8 +7,9 @@ def test_add_item():
     url = "http://app:5000/add"
     data = {"title": "Buy groceries"}
 
+    time.sleep(10)  # מחכה שה-API יהיה מוכן
+
     try:
-	time.sleep(10)
         response = requests.post(url, data=data)
     except Exception as e:
         print(f"Request failed: {e}")
