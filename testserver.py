@@ -3,7 +3,7 @@ import requests
 import sys
 
 def test_add_item():
-	url = "http://app:5000/add"    
+	url = "http://app:5000/add" 
 	data = {"title": "Buy groceries"}
 
     try:
