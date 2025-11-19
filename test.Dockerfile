@@ -1,9 +1,13 @@
-FROM python:3.12-slim
+FROM python:3.8-slim
 
+RUN python -m pip install --upgrade pip
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY testserver.py .
 
-COPY . .
+RUN pip install requests
+COPY requirements.txt .
+RUN if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
 CMD ["python", "testserver.py"]
+
