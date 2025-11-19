@@ -1,6 +1,9 @@
-FROM python
-RUN python -m pip install --upgrade pip
+FROM python:3.12-slim
+
 WORKDIR /app
-COPY ./testserver.py .
-RUN pip install requests
-CMD ["python", "testserver.py"]
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+CMD ["pytest", "-q"]
